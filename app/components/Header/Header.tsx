@@ -1,14 +1,26 @@
 "use client";
 
-import * as S from "./Header.style";
-import { Button } from "@mui/material";
+import { Button, Container, Typography } from "@mui/material";
 
 const Header = () => {
   return (
-    <S.HeaderContainer>
-      <h1>YukDDong's Blog</h1>
+    <Container
+      sx={{
+        display: "flex",
+        width: "100%",
+        padding: "10px 20px",
+        boxSizing: "border-box",
+        alignItems: "center",
+        justifyContent: "space-between",
+        borderBottom: 1,
+        borderColor: "primary.main",
+      }}
+    >
+      <Typography variant="h4" color="primary.main">
+        YukDDong's Blog
+      </Typography>
       <Button>toggle</Button>
-    </S.HeaderContainer>
+    </Container>
   );
 };
 

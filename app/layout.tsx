@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import ThemeRegistry from "./ThemeRegistry";
-import { Container } from "@mui/material";
+import { Container, Paper } from "@mui/material";
 import Header from "./components/Header/Header";
+import SideBar from "./components/SideBar/SideBar";
+import Main from "./components/Main/Main";
 
 export const metadata: Metadata = {
   title: "YukDDong 블로그",
@@ -20,7 +21,22 @@ export default function RootLayout({
         <ThemeRegistry options={{ key: "mui" }}>
           <Container maxWidth="lg">
             <Header />
-            {children}
+            <div
+              style={{
+                display: "flex",
+              }}
+            >
+              <SideBar />
+              <div
+                style={{
+                  flex: 1,
+                  width: "auto",
+                  height: "auto",
+                }}
+              >
+                {children}
+              </div>
+            </div>
           </Container>
         </ThemeRegistry>
       </body>

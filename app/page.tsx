@@ -1,11 +1,9 @@
-import { Button } from "@mui/material";
-import Link from "next/link";
-import NavBar from "./components/NavBar/NavBar";
+import PostList from "./components/PostList/PostList";
 
 export default function Home() {
   return (
     <>
-      <NavBar />
+      <PostList />
     </>
   );
 }
